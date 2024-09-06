@@ -4,75 +4,182 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Preview</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+    />
+    <!-- <style>*{outline: 2px solid red;}</style> -->
   </head>
-  <body>
-    <div class="shape"></div>
-    <div class="iphone">
-      <div class="header">
-        <div class="friend">
-        <img src="images/less-than.svg" alt="back to chats" class="back">
-        <img src="images/avatar.jpg" alt="Sam Green" class="pp"/>
-        <div class="profile">
-          <p class="name"><span>Samuel Green</span> <br>Available for walk</p>
-        </div></div>
-        <img src="images/elipsis.svg" alt="options" class="options">
+  <body class="flex">
+    <div
+      class="shape bg-ModerateViolet w-[15rem] md:w-[30%] absolute rounded-br-[25rem] top-0 h-[45rem] md:rounded-b-full md:-left-[5%]"
+    ></div>
+    <div
+      class="container flex flex-col md:flex-row gap-16 md:items-center md:gap-4 md:w-[70%] mx-auto py-20 h-screen"
+    >
+      <div
+        class="iphone flex flex-col bg-white z-0 rounded-[2rem] p-4 w-[80%] shadow-2xl mx-auto max-w-[300px]"
+      >
+        <div
+          class="header w-[100%] flex flex-row relative items-center p-6 justify-between rounded-t-3xl rounded-b-lg"
+          style="
+            background: linear-gradient(
+              to right,
+              hsl(264, 100%, 61%),
+              hsl(293, 100%, 63%)
+            );
+          "
+        >
+          <div
+            class="absolute w-[50%] h-5 rounded-b-2xl left-[25%] top-0 bg-white"
+          ></div>
+          <div class="flex gap-3 items-center">
+            <div class="text-white font-bold">&LeftAngleBracket;</div>
+            <img
+              src="images/avatar.jpg"
+              class="w-8 h-8 rounded-full border-2"
+              alt="Sam Green"
+              class="person"
+            />
+            <div class="profile">
+              <p class="name text-white font-bold">Samuel Green</p>
+              <p class="font-normal text-GrayishBlue text-xs">
+                Available for walk
+              </p>
+            </div>
+          </div>
+          <img src="images/elipsis.svg" alt="options" class="options" />
+        </div>
+
+        <div
+          class="inbox bg-LightGrayishViolet font-semibold flex flex-col gap-5 py-8 px-2 -mt-3 rounded-b-2xl text-ModerateViolet"
+        >
+          <div class="client1st flex flex-col gap-3">
+            <p
+              class="bg-PaleViolet text-xs w-48 py-2 pl-2 pr-6 rounded-r-2xl rounded-tl-2xl rounded-bl-md"
+            >
+              That sounds great. I’d be happy to discuss more.
+            </p>
+            <p
+              class="bg-PaleViolet text-xs w-48 p-2 rounded-r-2xl rounded-tl-2xl rounded-bl-md"
+            >
+              Could you send over some pictures of your dog, please?
+            </p>
+          </div>
+
+          <div class="sam flex flex-col items-end gap-3">
+            <div class="dog flex gap-3">
+              <img
+                src="images/dog-image-1.jpg"
+                alt="dog"
+                class="dogimg w-14 rounded-xl"
+              />
+              <img
+                src="images/dog-image-2.jpg"
+                alt="dog"
+                class="dogimg w-14 rounded-xl"
+              />
+              <img
+                src="images/dog-image-3.jpg"
+                alt="dog"
+                class="dogimg w-14 rounded-xl"
+              />
+            </div>
+            <p
+              class="bg-white text-xs w-48 py-2 px-2 rounded-l-2xl rounded-tr-2xl rounded-br-md"
+            >
+              Here are few pictures. She's a happy girl!
+            </p>
+            <p
+              class="bg-white text-xs w-fit py-2 px-2 rounded-l-2xl rounded-tr-2xl rounded-br-md"
+            >
+              Can you make it?
+            </p>
+          </div>
+
+          <div class="client2nd flex flex-col gap-3">
+            <p
+              class="bg-GrayishBlue text-xs w-48 p-2 rounded-r-2xl rounded-tl-2xl rounded-bl-md pr-5"
+            >
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </p>
+            <div class="pay text-white flex flex-col gap-4">
+              <div
+                class="rate1 flex gap-3 items-center w-56 py-3 pl-3 pr-5 rounded-r-xl rounded-tl-xl rounded-bl-md"
+                style="
+                  background: linear-gradient(
+                    to left,
+                    hsl(264, 100%, 61%),
+                    hsl(293, 100%, 63%)
+                  );
+                "
+              >
+                <div
+                  class="circle w-5 h-4 border-violet-400 border-2 rounded-full"
+                ></div>
+                <div class="flex justify-between w-full items-center">
+                  <p class="text-xs">30 minutes walk</p>
+                  <p class="price font-bold">$29</p>
+                </div>
+              </div>
+              <div
+                class="rate2 flex gap-4 items-center w-56 py-3 pl-3 pr-5 rounded-r-xl rounded-tl-xl rounded-bl-md"
+                style="
+                  background: linear-gradient(
+                    to left,
+                    hsl(264, 100%, 61%),
+                    hsl(293, 100%, 63%)
+                  );
+                "
+              >
+                <div
+                  class="circle w-5 h-4 border-violet-400 border-2 rounded-full"
+                ></div>
+                <div class="flex justify-between w-full items-center">
+                  <p class="text-xs">1 hour walk</p>
+                  <p class="price font-bold">$49</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="type flex items-center -mb-4 m-auto w-full relative">
+            <input
+              type="text"
+              name="message"
+              id="message"
+              placeholder="Type a message..."
+              class="w-full py-3 pl-8 pr-4 rounded-full relative outline-none"
+            />
+            <button
+              class="send absolute bg-VeryDarkDesaturatedViolet flex p-2 rounded-full items-center w-10 h-10 right-[.5rem]"
+            >
+              <img
+                src="images/greater-than.svg"
+                alt="send"
+                class="w-[30%] h-8 mx-auto"
+              />
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div class="inbox">
-        <div class="client1st">
-          <p>That sounds great. I’d be happy to discuss more.</p>
-          <p>Could you send over some pictures of your dog, please?</p>
-        </div>
-
-        <div class="sam">
-          <div class="dog">
-            <img src="images/dog-image-1.jpg" alt="dog" class="dogimg" />
-            <img src="images/dog-image-2.jpg" alt="dog" class="dogimg" />
-            <img src="images/dog-image-3.jpg" alt="dog" class="dogimg" />
-          </div>
-          <p>Here are few picctures. She's a happy girl!</p>
-          <p>Can you make it?</p>
-        </div>
-
-        <div class="client2nd">
-          <p>
-            She looks so happy! The time we discussed works. How long shall I
-            take her out for?
-          </p>
-          <div class="pay">
-          <div class="rate1">
-            <div class="circle"></div>
-            <p>30 minutes walk</p>
-            <p class="price">$29</p>
-          </div>
-          <div class="rate2">
-            <div class="circle"></div>
-            <p>1 hour walk</p>
-            <p class="price">$49</p>
-          </div></div>
-        </div>
-        <div class="type">
-          <input
-            type="text"
-            name="message"
-            id="message"
-            placeholder="Tpye a message..."
-          />
-          <div class="send"><img src="images/greater-than.svg" alt="" /></div>
-        </div>
+      <div
+        class="explanation mx-auto text-center px-14 text-DesaturatedDarkViolet flex flex-col gap-4 md:text-left md:max-w-[34rem]"
+      >
+        <h2
+          class="font-semibold text-3xl md:text-4xl text-VeryDarkDesaturatedViolet"
+        >
+          Simple booking
+        </h2>
+        <p>
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangement and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
       </div>
     </div>
-</div>
-
-    <section class="explanation">
-      <h2>Simple booking</h2>
-      <p>
-        Stay in touch with our dog walkers through the chat inteerface. This
-        makes it easy to discuss arrangement and make bookings. Once the walk
-        has been completed you can rate your walker and book again all through
-        the chat.
-      </p>
-    </section>
   </body>
 </html>
